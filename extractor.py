@@ -16,6 +16,3 @@ def fetch_currency_data(league_name="Allflame"):
     else:
         print(f"Failed to fetch data. Error code: {response.status_code}")
         return None
-    
-if __name__ == "__main__":
-    raw_df = fetch_currency_data()
