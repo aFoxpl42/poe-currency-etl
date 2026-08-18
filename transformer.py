@@ -9,7 +9,9 @@ def clean_currency_data(raw_data):
     df = pd.merge(df_lines, df_core, on='id')
     
     df.drop(labels=['maxVolumeCurrency', 'maxVolumeRate', 'sparkline', 'detailsId'], axis = 1, inplace=True)
-    print(df.head())
+    df['time'] = pd.Timestamp.now()
+    
+    return df
     
 extracted_data = fetch_currency_data()
 clean_currency_data(extracted_data)
