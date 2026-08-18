@@ -9,9 +9,7 @@ def fetch_currency_data(league_name="Allflame"):
     
     if response.status_code == 200:
         data = response.json()
-        
-        print("\n--- Raw Data Successfully Extracted ---")
-        
+                
         return data
     else:
         print(f"Failed to fetch data. Error code: {response.status_code}")
