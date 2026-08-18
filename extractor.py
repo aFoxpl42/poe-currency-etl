@@ -10,14 +10,9 @@ def fetch_currency_data(league_name="Allflame"):
     if response.status_code == 200:
         data = response.json()
         
-        df = pd.DataFrame(data['lines'])
-        
         print("\n--- Raw Data Successfully Extracted ---")
         
-        print(df.columns)
-        
-        
-        return df
+        return data
     else:
         print(f"Failed to fetch data. Error code: {response.status_code}")
         return None
