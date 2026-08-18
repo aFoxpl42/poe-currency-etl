@@ -1,8 +1,8 @@
 import requests
 import pandas as pd
 
-def fetch_currency_data(league_name="Allflame"):
-    url = f"https://poe.ninja/poe1/api/economy/exchange/current/overview?league={league_name}&type=Currency"
+def fetch_currency_data(league_name="Allflame", category="Currency"):
+    url = f"https://poe.ninja/poe1/api/economy/exchange/current/overview?league={league_name}&type={category}"
     
     print(f"Fetching data from: {url}")
     response = requests.get(url)
